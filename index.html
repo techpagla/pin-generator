@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input id="input-key"  class="form-control" type="text">
+                    <input id="input-key"  class="form-control" type="text" minlength="1" maxlength="4" >
                     <div class="numbers">
                         <div id="all-keyboard" class="calc-body">
                             <div class="calc-button-row">
@@ -41,17 +41,17 @@
                                 <div class="button">0</div>
                                 <div class="button">C</div>
                             </div>
-                            <div>
-                                <button type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                            <div id="submit-left-action">
+                                <button id="submit-btn" type="submit" class="submit-btn">Submit</button>
+                                <p  id="parent-action-left" class="action-left"> <span id="action-left">3</span>  try left</p>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p style="display:none" id="pin-not-match-text" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p style="display:none" id="pin-match-text"  class="notify">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
     <script src="js/index.js"></script>
